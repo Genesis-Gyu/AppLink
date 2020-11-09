@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous">
+    </script>
+
+    <!-- <script type="text/javascript" src="./js/appLink.js"></script> -->
+
+    <script type="text/javascript">
+      console.log("init");
+
+      if( /iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
+        window.open("https://apps.apple.com/us/app/viewinter/id1434802044?l=ko&ls=1");
+      } else if ( /Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )  {
+        window.open("https://play.google.com/store/apps/details?id=ai.genesislab.viewinter");
+      } else {
+        window.open("https://front.viewinter.ai/");
+      }
+    </script>
+
+  </head>
+  <body>
+
+  </body>
+</html>
