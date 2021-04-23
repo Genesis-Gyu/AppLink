@@ -16,22 +16,10 @@
       console.log("init");
 
       if( /iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
-        
-        const visitedAt = new Date().getTime(); // 방문 시간
-        setTimeout(function () {
-          if (new Date().getTime() - visitedAt < 2000) {
-            window.location.href = "https://apps.apple.com/us/app/viewinter/id1434802044?l=ko&ls=1";
-          } 
-        }, 500);
-        
-         setTimeout(function () {
-           window.location.href = "viewinter://"
-         }, 0);
-        /*
         setTimeout(function () {
           window.location = "https://apps.apple.com/us/app/viewinter/id1434802044?l=ko&ls=1";
-        }, 3000);
-        window.location = "viewinter://"*/
+        }, 5000);
+        window.location = "viewinter://"
         
       } else if ( /Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )  {
         window.open("https://play.google.com/store/apps/details?id=ai.genesislab.viewinter");
