@@ -16,10 +16,22 @@
       console.log("init");
 
       if( /iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
+        /*
         window.location = "viewinter://"
         setTimeout(function () {
           window.location = "https://apps.apple.com/us/app/viewinter/id1434802044?l=ko&ls=1";
-        }, 2000);
+        }, 2000);*/
+        
+        window.onload = function() {
+        // Deep link to your app goes here
+        document.getElementById("l").src = "viewinter://";
+
+        setTimeout(function() {
+            // Link to the App Store should go here -- only fires if deep link fails
+            window.location = "https://apps.apple.com/us/app/viewinter/id1434802044?l=ko&ls=1";
+        }, 500);
+        };
+
         
         
       } else if ( /Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )  {
@@ -28,7 +40,8 @@
         window.open("https://front.viewinter.ai/");
       }
     </script>
-
+    <iframe id="l" width="1" height="1" style="visibility:hidden"></iframe>
+    
   </head>
   <body>
 
